@@ -9,3 +9,6 @@ Results until now:
     - if it is a numpy array and you have to do the operation less then 100 times, do it as is, else, convert the np.array to a set.
 - To add a list to another one, the fastest way is to use: ```seq_1 = seq_1 + seq_2```, do not use += or extend
 - To create a dict, the fastest way is to initialize one empty dict ```dictionary = {}``` and then fill it using ```dictionary[key] = value```
+- To multiply two matrices, the fastest way is to use ```m1@m2``` with the ```@numba.jit(nopython=True)``` decorator (numba required)
+- To do a sum of an array, the fastest way is to use ```@numba.jit(nopython=True)``` decorator (numba required)
+- 
